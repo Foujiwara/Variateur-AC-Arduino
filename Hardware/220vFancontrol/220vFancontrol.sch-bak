@@ -1,0 +1,446 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Transformer_1P_1S T1
+U 1 1 6029076D
+P 4050 2750
+F 0 "T1" H 4050 3131 50  0000 C CNN
+F 1 "Transformer_1P_1S" H 4050 3040 50  0000 C CNN
+F 2 "" H 4050 2750 50  0001 C CNN
+F 3 "~" H 4050 2750 50  0001 C CNN
+	1    4050 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 60292503
+P 5300 1600
+F 0 "D2" H 5300 1700 50  0000 C CNN
+F 1 "D" H 5300 1475 50  0000 C CNN
+F 2 "" H 5300 1600 50  0001 C CNN
+F 3 "~" H 5300 1600 50  0001 C CNN
+	1    5300 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 6029317A
+P 5550 2550
+F 0 "C1" H 5668 2596 50  0001 L CNN
+F 1 "25v 10uf" H 5668 2550 50  0000 L CNN
+F 2 "" H 5588 2400 50  0001 C CNN
+F 3 "~" H 5550 2550 50  0001 C CNN
+	1    5550 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 60295960
+P 7350 2750
+F 0 "A1" V 7400 2650 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" V 7250 2750 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 7500 1800 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 7350 1750 50  0001 C CNN
+	1    7350 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BT136-600 Q1
+U 1 1 60296992
+P 3300 3500
+F 0 "Q1" H 3050 3500 50  0000 L CNN
+F 1 "BT136-600" H 2800 3700 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3500 3425 50  0001 L CIN
+F 3 "http://www.micropik.com/PDF/BT136-600.pdf" H 3300 3500 50  0001 L CNN
+	1    3300 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_SolidState:MOC3010M U1
+U 1 1 60297B03
+P 4050 3300
+F 0 "U1" H 4050 3625 50  0000 C CNN
+F 1 "MOC3010M" H 4050 3534 50  0000 C CNN
+F 2 "" H 3850 3100 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 4025 3300 50  0001 L CNN
+	1    4050 3300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60298D4C
+P 3600 3200
+F 0 "R1" V 3700 3150 50  0000 L CNN
+F 1 "1k" V 3600 3150 50  0000 L CNN
+F 2 "" V 3530 3200 50  0001 C CNN
+F 3 "~" H 3600 3200 50  0001 C CNN
+	1    3600 3200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4600 2550 4550 2550
+$Comp
+L Device:D_Bridge_+-AA D1
+U 1 1 60293D13
+P 4900 2550
+F 0 "D1" V 5200 2850 50  0001 R CNN
+F 1 "D_Bridge_+-AA" V 5300 2950 50  0001 R CNN
+F 2 "" H 4900 2550 50  0001 C CNN
+F 3 "~" H 4900 2550 50  0001 C CNN
+	1    4900 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 2550 5200 2950
+Wire Wire Line
+	4450 2950 5200 2950
+Wire Wire Line
+	4900 2850 5550 2850
+Wire Wire Line
+	4900 2250 5550 2250
+Wire Wire Line
+	5550 2850 5550 2700
+Wire Wire Line
+	5550 2400 5550 2250
+Wire Wire Line
+	5550 2250 5850 2250
+Connection ~ 5550 2250
+Wire Wire Line
+	5550 2850 5850 2850
+Connection ~ 5550 2850
+$Comp
+L power:+12V #PWR0101
+U 1 1 6029EFAC
+P 5850 2250
+F 0 "#PWR0101" H 5850 2100 50  0001 C CNN
+F 1 "+12V" V 5865 2378 50  0000 L CNN
+F 2 "" H 5850 2250 50  0001 C CNN
+F 3 "" H 5850 2250 50  0001 C CNN
+	1    5850 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 6029FDC0
+P 5850 2850
+F 0 "#PWR0102" H 5850 2600 50  0001 C CNN
+F 1 "GND" V 5855 2722 50  0000 R CNN
+F 2 "" H 5850 2850 50  0001 C CNN
+F 3 "" H 5850 2850 50  0001 C CNN
+	1    5850 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4550 2550 4550 1600
+Wire Wire Line
+	4550 1600 5150 1600
+Connection ~ 4550 2550
+Wire Wire Line
+	4550 2550 4450 2550
+Text GLabel 5850 1950 2    50   Input ~ 0
+0-Cross
+Wire Wire Line
+	5850 1950 5550 1950
+Text Notes 3500 2750 0    50   ~ 0
+230VAC\n
+$Comp
+L power:+12V #PWR0103
+U 1 1 602A1F30
+P 7250 1650
+F 0 "#PWR0103" H 7250 1500 50  0001 C CNN
+F 1 "+12V" H 7265 1823 50  0000 C CNN
+F 2 "" H 7250 1650 50  0001 C CNN
+F 3 "" H 7250 1650 50  0001 C CNN
+	1    7250 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 1750 7250 1650
+Wire Wire Line
+	7350 3750 7350 3800
+Wire Wire Line
+	7350 3800 7400 3800
+Wire Wire Line
+	7450 3800 7450 3750
+Wire Wire Line
+	7400 3800 7400 3850
+Connection ~ 7400 3800
+Wire Wire Line
+	7400 3800 7450 3800
+$Comp
+L power:GND #PWR0104
+U 1 1 602A39BD
+P 7400 3850
+F 0 "#PWR0104" H 7400 3600 50  0001 C CNN
+F 1 "GND" H 7405 3677 50  0000 C CNN
+F 2 "" H 7400 3850 50  0001 C CNN
+F 3 "" H 7400 3850 50  0001 C CNN
+	1    7400 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 602A46EC
+P 5550 1750
+F 0 "R4" H 5620 1796 50  0000 L CNN
+F 1 "20k" H 5620 1705 50  0000 L CNN
+F 2 "" V 5480 1750 50  0001 C CNN
+F 3 "~" H 5550 1750 50  0001 C CNN
+	1    5550 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 602A491C
+P 4500 3400
+F 0 "R2" V 4400 3400 50  0000 C CNN
+F 1 "200" V 4500 3400 50  0000 C CNN
+F 2 "" V 4430 3400 50  0001 C CNN
+F 3 "~" H 4500 3400 50  0001 C CNN
+	1    4500 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 3400 3750 3400
+Wire Wire Line
+	3450 3200 3300 3200
+Wire Wire Line
+	3300 3200 3300 3350
+Wire Wire Line
+	3300 3650 3300 3750
+Connection ~ 3300 3200
+Text GLabel 3300 3750 3    50   Input ~ 0
+to_Fan
+$Comp
+L power:AC #PWR0105
+U 1 1 602AAD23
+P 3300 2850
+F 0 "#PWR0105" H 3300 2750 50  0001 C CNN
+F 1 "AC" V 3450 2950 50  0001 L CNN
+F 2 "" H 3300 2850 50  0001 C CNN
+F 3 "" H 3300 2850 50  0001 C CNN
+	1    3300 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2950 3650 2950
+Wire Wire Line
+	3300 2950 3300 3200
+Text GLabel 3050 3750 3    50   Input ~ 0
+to_Fan
+Wire Wire Line
+	3650 2550 3300 2550
+Wire Wire Line
+	3050 2550 3050 3750
+Wire Wire Line
+	3300 2950 3300 2850
+Connection ~ 3300 2950
+Wire Wire Line
+	3300 2550 3300 2650
+Connection ~ 3300 2550
+Wire Wire Line
+	3300 2550 3050 2550
+$Comp
+L power:GND #PWR0106
+U 1 1 602BE90E
+P 5850 3200
+F 0 "#PWR0106" H 5850 2950 50  0001 C CNN
+F 1 "GND" V 5855 3072 50  0000 R CNN
+F 2 "" H 5850 3200 50  0001 C CNN
+F 3 "" H 5850 3200 50  0001 C CNN
+	1    5850 3200
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5850 3400 2    50   Input ~ 0
+Fan_Start
+Text GLabel 6850 2750 0    50   Input ~ 0
+Fan_Start
+$Comp
+L Device:R R3
+U 1 1 602BF544
+P 5350 1950
+F 0 "R3" V 5250 1950 50  0000 C CNN
+F 1 "10k" V 5350 1950 50  0000 C CNN
+F 2 "" V 5280 1950 50  0001 C CNN
+F 3 "~" H 5350 1950 50  0001 C CNN
+	1    5350 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5550 1600 5450 1600
+$Comp
+L power:GND #PWR0107
+U 1 1 602C37D7
+P 5200 1950
+F 0 "#PWR0107" H 5200 1700 50  0001 C CNN
+F 1 "GND" V 5205 1822 50  0000 R CNN
+F 2 "" H 5200 1950 50  0001 C CNN
+F 3 "" H 5200 1950 50  0001 C CNN
+	1    5200 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 1950 5550 1950
+Wire Wire Line
+	5550 1950 5550 1900
+Connection ~ 5550 1950
+Text Notes 5850 1850 0    50   ~ 0
+12v = 4v\n
+Text GLabel 6850 2450 0    50   Input ~ 0
+0-Cross
+Wire Notes Line
+	2800 2100 2800 4200
+Wire Notes Line
+	4000 4200 4000 3700
+Text Notes 3000 2000 0    50   ~ 0
+High Voltage (Danger !!)\n
+Wire Notes Line
+	4100 3100 4100 3000
+$Comp
+L Device:Thermistor_NTC TH1
+U 1 1 602CC79F
+P 5000 3850
+F 0 "TH1" V 5250 3850 50  0000 C CNN
+F 1 "NTC 100k" V 5150 3850 50  0000 C CNN
+F 2 "" H 5000 3900 50  0001 C CNN
+F 3 "~" H 5000 3900 50  0001 C CNN
+	1    5000 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4850 3850 4700 3850
+Wire Wire Line
+	4700 3850 4700 3700
+Wire Wire Line
+	4700 3700 5850 3700
+Wire Wire Line
+	5150 3850 5350 3850
+$Comp
+L power:GND #PWR0108
+U 1 1 602D1062
+P 5850 4000
+F 0 "#PWR0108" H 5850 3750 50  0001 C CNN
+F 1 "GND" V 5850 3850 50  0000 R CNN
+F 2 "" H 5850 4000 50  0001 C CNN
+F 3 "" H 5850 4000 50  0001 C CNN
+	1    5850 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 602D135B
+P 5550 4000
+F 0 "R5" V 5450 4000 50  0000 C CNN
+F 1 "100k" V 5550 4000 50  0000 C CNN
+F 2 "" V 5480 4000 50  0001 C CNN
+F 3 "~" H 5550 4000 50  0001 C CNN
+	1    5550 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 4000 5350 4000
+Wire Wire Line
+	5350 4000 5350 3850
+Connection ~ 5350 3850
+Wire Wire Line
+	5350 3850 5850 3850
+$Comp
+L power:+5V #PWR0109
+U 1 1 602D2CD0
+P 5850 3700
+F 0 "#PWR0109" H 5850 3550 50  0001 C CNN
+F 1 "+5V" V 5850 3850 50  0000 L CNN
+F 2 "" H 5850 3700 50  0001 C CNN
+F 3 "" H 5850 3700 50  0001 C CNN
+	1    5850 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5850 4000 5700 4000
+Text GLabel 5850 3850 2    50   Input ~ 0
+NTC
+Text GLabel 7850 2750 2    50   Input ~ 0
+NTC
+$Comp
+L power:+5V #PWR?
+U 1 1 602D52C5
+P 7550 1650
+F 0 "#PWR?" H 7550 1500 50  0001 C CNN
+F 1 "+5V" H 7565 1823 50  0000 C CNN
+F 2 "" H 7550 1650 50  0001 C CNN
+F 3 "" H 7550 1650 50  0001 C CNN
+	1    7550 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1650 7550 1750
+Wire Notes Line
+	4100 3000 6300 3000
+Wire Notes Line
+	6300 2100 4700 2100
+Wire Notes Line
+	4100 2100 4450 2100
+Wire Notes Line
+	6300 1300 6300 4200
+Wire Notes Line
+	4300 3500 6300 3500
+Text Notes 4200 4150 0    50   ~ 0
+0° = 321k\n25° = 100k\n100° = 6.49k\n125° = 3.186k
+Text Notes 4250 2750 0    50   ~ 0
+17.8V top 
+Wire Wire Line
+	4350 3200 5850 3200
+Wire Wire Line
+	5850 3400 4650 3400
+Text Notes 4850 1400 0    50   ~ 0
+Zero cross sending circuit
+Text Notes 5000 2200 0    50   ~ 0
+Power supply circuit 
+Text Notes 5000 3100 0    50   ~ 0
+Triac trigger circuit
+Text Notes 4900 3600 0    50   ~ 0
+Temperature sending circuit\n
+Text Notes 4850 1150 0    50   ~ 0
+Low Voltage (Isolated)
+Text Notes 3200 2200 0    50   ~ 0
+power circuit
+Wire Notes Line
+	8250 1300 8250 4200
+Wire Notes Line
+	4100 1300 8250 1300
+Wire Notes Line
+	2800 4200 4000 4200
+Wire Notes Line
+	4000 3100 4000 3000
+Wire Notes Line
+	4000 2300 4000 2100
+Wire Notes Line
+	2800 2100 4000 2100
+Wire Notes Line
+	4100 1300 4100 2300
+Wire Notes Line
+	4100 3700 4100 4200
+Wire Notes Line
+	4100 4200 8250 4200
+Wire Notes Line
+	4100 3700 4300 3700
+Wire Notes Line
+	4300 3700 4300 3500
+Text Notes 6900 1400 0    50   ~ 0
+Microcontroller circuit
+Text Notes 4250 2850 0    50   ~ 0
+12.35v RMS\n
+$EndSCHEMATC
