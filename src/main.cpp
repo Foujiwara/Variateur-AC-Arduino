@@ -8,6 +8,7 @@
 #define DEBUG 0
 #define TEMP 0
 #define DELAY0 30 //On state Triac delay 
+#define AC_FREQUENCY 10000 // 10000 for 50hz, 8333 for 60hz
 
 // ########################## INT ##########################
 uint8_t speed_val = 0;
@@ -56,7 +57,7 @@ void zero_crossing()
     digitalWrite(TRIAC, HIGH);
     delayMicroseconds(DELAY0);
     digitalWrite(TRIAC, LOW);
-    delayMicroseconds(10000 - DELAY0);
+    delayMicroseconds(AC_FREQUENCY - DELAY0);
     digitalWrite(TRIAC, HIGH);
     delayMicroseconds(DELAY0);
     digitalWrite(TRIAC, LOW);
