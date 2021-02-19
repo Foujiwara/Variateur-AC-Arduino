@@ -4,7 +4,7 @@
 
 #define TRIAC 6
 //#define ANALOG_IN A0
-#define ThermistorPin A1
+#define ThermistorPin A6
 #define DEBUG 0
 #define TEMP 1
 #define POT 0
